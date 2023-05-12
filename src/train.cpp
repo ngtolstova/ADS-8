@@ -29,7 +29,7 @@ int Train::getOpCount() {
 int Train::getLength() {
   Cage* tmp = first;
   int step = 0, length = 0;
-  if(!first->light)
+  if (!first->light)
     first->light = !first->light;
   bool lt_0 = first->light;
   while (1) {
