@@ -29,7 +29,8 @@ int Train::getOpCount() {
 int Train::getLength() {
   Cage* tmp = first;
   int step = 0, length = 0;
-  first->light = !first->light;
+  if(!first->light)
+    first->light = !first->light;
   bool lt_0 = first->light;
   while (1) {
     tmp = tmp->next;
@@ -48,7 +49,7 @@ int Train::getLength() {
         return length;
       }
     }
-    if (countOp > 10000)
+    if (countOp > 10000000)
       return -1;
     continue;
   }
